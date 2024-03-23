@@ -14,17 +14,17 @@ export default function MobileNav({ value }) {
         e.preventDefault()
 
         dispatch({
-            type : "Display/Hide SideBar",
-            payload : {
-              showSideBar : false
+            type: "Display/Hide SideBar",
+            payload: {
+                showSideBar: false
             }
         })
     }
 
     return (
-        <div id="mobile-nav" className={showSideBar ? "absolute top-10 left-0 sm:hidden flex flex-col w-screen h-screen bg-[#0052FE] opacity-90 px-8" : "hidden"}>
+        <div id="mobile-nav" className={showSideBar ? "fixed top-0 z-30 left-0 sm:hidden flex flex-col w-screen h-screen bg-[#0052FE] opacity-90 px-8" : "hidden"}>
             <div className="basis-1/6 flex flex-row items-center justify-end">
-                <FaXmark size={24} color="#fff" onClick={handleSideBar}/>
+                <FaXmark size={24} color="#fff" onClick={handleSideBar} />
             </div>
             <div className="basis-3/6 flex flex-col items-center mb-4">
                 <div className={clsx("mb-2", "text-center", value == "hamsters" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
@@ -36,10 +36,13 @@ export default function MobileNav({ value }) {
                 <div className={clsx("mb-2", "mt-2", "text-center", value == "bets" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
                     <Link href="/bets" className={clsx(value == "bets" ? "text-[#7A848B]" : "text-white", "hover:text-[#7A848B]", "font-black", "text-lg")}>BETS</Link>
                 </div>
+                <div className={clsx("mb-2", "mt-2", "text-center", value == "play" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
+                    <Link href="/play" className={clsx(value == "play" ? "text-[#7A848B]" : "text-white", "hover:text-[#7A848B]", "font-black", "text-lg")}>BETS</Link>
+                </div>
                 <div className={clsx("mb-2", "mt-2", "text-center", value == "withdraw" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
                     <Link href="/withdraw" className={clsx(value == "withdraw" ? "text-[#7A848B]" : "text-white", "hover:text-[#7A848B]", "font-black", "text-lg")}>WITHDRAW</Link>
                 </div>
-                <div className={clsx( "mt-2", "text-center", value == "support" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
+                <div className={clsx("mt-2", "text-center", value == "support" ? "bg-[#142632]" : "bg-[#0F212E]", "hover:bg-[#142632]", "rounded-lg", "px-6", "py-6")}>
                     <Link href="/support" className={clsx(value == "support" ? "text-[#7A848B]" : "text-white", "hover:text-[#7A848B]", "font-black", "text-lg")}>SUPPORT</Link>
                 </div>
             </div>
@@ -47,17 +50,17 @@ export default function MobileNav({ value }) {
                 <div className="grid grid-cols-3">
                     <div className="flex justify-center items-center">
                         <Link href="https://t.me/crypto_hamster_betting_bot">
-                            <FaTelegram size={48} color="#fff" className=""/>
+                            <FaTelegram size={48} color="#fff" className="" />
                         </Link>
                     </div>
                     <div className="flex justify-center items-center">
                         <Link href="https://x.com/racinghamsters">
-                            <FaXTwitter size={48} color="#fff" className=""/>
+                            <FaXTwitter size={48} color="#fff" className="" />
                         </Link>
                     </div>
                     <div className="flex justify-center items-center">
                         <Link href="https://www.racinghamsters.com/">
-                            <FaDiscord size={48} color="#fff" className=""/>
+                            <FaDiscord size={48} color="#fff" className="" />
                         </Link>
                     </div>
                 </div>

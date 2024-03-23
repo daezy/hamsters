@@ -21,7 +21,7 @@ export default function Hamsters() {
         wins: "--",
         losses: "--"
     }
-    
+
     const [hamsterA, setHamsterA] = useState(pool)
     const [hamsterB, setHamsterB] = useState(pool)
     const [hamsterC, setHamsterC] = useState(pool)
@@ -33,10 +33,10 @@ export default function Hamsters() {
 
     let provider;
 
-    if(walletProvider) {
+    if (walletProvider) {
         provider = new ethers.BrowserProvider(walletProvider)
     }
-    
+
     useEffect(() => {
         const getPools = async () => {
             const signer = await provider.getSigner()
@@ -84,14 +84,14 @@ export default function Hamsters() {
             // setHamsterD(_hamsterD)
         }
 
-        if(isConnected) {
+        if (isConnected) {
             getPools()
         }
     }, [isConnected, provider])
 
     return (
         <div id="hams_ters" className="bg-[#0052FE] p-4">
-            <ToastContainer/>
+            <ToastContainer />
             <div className="rounded-lg bg-[#0F212E] border border-[#8D969C] px-4 sm:px-16 py-4">
                 <h1 className="p-4 sm:p-8 text-center text-white font-black text-2xl sm:text-6xl">OUR HAMSTERS</h1>
                 <div className="hidden sm:grid grid-cols-3 gap-4 mb-4">

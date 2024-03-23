@@ -7,15 +7,15 @@ import Nav from "@/components/Nav";
 export default function LivePlay() {
     return (
         <>
-            <MobileNav/>
+            <MobileNav />
             <section id="heading">
-                <Header page="/play"/>
+                <Header page="/play" />
             </section>
             <section id="navigation">
-                <Nav value="play"/>
+                <Nav value="play" />
             </section>
             <section id="_bets">
-                <Live/>
+                <Live />
             </section>
         </>
     )

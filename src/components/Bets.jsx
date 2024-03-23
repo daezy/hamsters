@@ -25,7 +25,7 @@ export default function Bets() {
 
     let provider;
 
-    if(walletProvider) {
+    if (walletProvider) {
         provider = new ethers.BrowserProvider(walletProvider)
     }
 
@@ -54,23 +54,23 @@ export default function Bets() {
                 }
                 _bets.push(_bet)
             })
-            if(_bets.length > 0) {
+            if (_bets.length > 0) {
                 setBets(_bets)
             }
         }
 
-        if(isConnected) {
+        if (isConnected) {
             getBets()
         }
     }, [address, isConnected, provider])
 
     return (
         <div id="bets" className="bg-[#0052FE] p-2 sm:p-8 h-screen sm:h-full">
-            <ToastContainer/>
+            <ToastContainer />
             <div className="sm:rounded-lg sm:bg-[#0F212E] sm:border sm:border-[#8D969C] sm:px-16 sm:py-4">
                 <h1 className="p-2 sm:p-8 text-center text-white font-black text-xl sm:text-6xl">BET HISTORY</h1>
                 <div className="px-1 py-2 sm:px-16 sm:py-4">
-                    <table className="table-auto w-full rounded-lg border-collapse border border-[#8D969C]">
+                    <table className="table-auto w-full rounded-lg border-collapse border border-[#8D969C] table-fixed">
                         <thead>
                             <tr className="bg-[#1A2C38]">
                                 <th className="p-1 sm:p-4 text-white font-bold text-xs sm:text-2xl border border-[#8D969C]">BetID</th>

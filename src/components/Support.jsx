@@ -9,7 +9,7 @@ export default function Support() {
                     <div className="flex justify-center px-8 py-2 sm:px-8 sm:py-4 mb-8">
                         <div className="flex flex-row">
                             <div className="hidden sm:block p-4">
-                                <FaHeadset size={60} color="#fff" className=""/>
+                                <FaHeadset size={60} color="#fff" className="" />
                             </div>
                             <div className="p-4">
                                 <h1 className="text-center text-white font-black text-2xl sm:text-6xl">SUPPORT</h1>
@@ -20,17 +20,17 @@ export default function Support() {
                         <div className="grid grid-cols-3">
                             <div className="flex justify-center items-center">
                                 <Link href="https://t.me/crypto_hamster_betting_bot">
-                                    <FaTelegram size={48} color="#fff" className=""/>
+                                    <FaTelegram size={48} color="#fff" className="" />
                                 </Link>
                             </div>
                             <div className="flex justify-center items-center">
                                 <Link href="https://x.com/racinghamsters">
-                                    <FaXTwitter size={48} color="#fff" className=""/>
+                                    <FaXTwitter size={48} color="#fff" className="" />
                                 </Link>
                             </div>
                             <div className="flex justify-center items-center">
                                 <Link href="https://www.racinghamsters.com/">
-                                    <FaWeebly size={48} color="#fff" className=""/>
+                                    <FaWeebly size={48} color="#fff" className="" />
                                 </Link>
                             </div>
                         </div>

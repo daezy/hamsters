@@ -11,7 +11,7 @@ export default function ConnectWallet() {
     const [account, setAccount] = useState()
 
     useEffect(() => {
-        if(isConnected) {
+        if (isConnected) {
             const _address = truncate(address)
 
             setAccount(_address)
@@ -27,8 +27,8 @@ export default function ConnectWallet() {
 
     return (
         <div id="connect-wallet">
-            <button onClick={() => open()} className="rounded-lg animate-pulse hover:animate-none font-medium text-white text-center text-xs sm:text-lg bg-[#DE8508] p-2 sm:p-4">
-                { isConnected ?
+            <button onClick={() => open()} className="rounded-md font-medium text-white text-center text-xs sm:text-base bg-[#DE8508] p-2 sm:p-4">
+                {isConnected ?
                     account : "Connect Wallet"
                 }
             </button>
